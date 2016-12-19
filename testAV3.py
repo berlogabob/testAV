@@ -50,6 +50,26 @@ ma = np.array(frame['mA'])
 #print y
 mv = np.array(frame['mV'])
 #print mv
+data = mv
+#print x
+#print type(data)
+for i in data:
+    if -1<i<1:
+        data=0
+        #print 'i in for loop for 0 = ', i
+        #i=0
+        #print 'and now i is = ', i
+
+    elif -301.0<i<-299.0:
+        data = -300
+        #print i
+    else:
+        print "error"
+print data
+"""
+
+"""
+"""
 #зона вывода графф
 plt.figure(num = 1, figsize=(10,6), dpi= 150)
 plt.suptitle(usinp_title, fontsize=16)
@@ -72,3 +92,4 @@ plt.grid(True)
 plt.figure(1).savefig(usinp_title + 'e' + '.png')
 plt.figure(1).savefig(usinp_title + 'e' + '.pdf')
 plt.show()
+"""

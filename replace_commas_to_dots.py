@@ -1,0 +1,5 @@
+s = open("mount.txt").read()
+s = s.replace(',', '.')
+f = open("mount.txt", 'w')
+f.write(s)
+f.close()
